@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Maquette</title>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/test.js"></script>
+    
+</head>
+<body>
+
+<header>
+    <li> <a href="#jeu">Jeu</a></li>
+    <li> <a href="#about">A propos</a></li>
+    <li> <a href="#transports">Transports</a></li>
+    <li> <a href="#team">Qui sommes-nous ?</a></li>
+</header>
+
+<hero>
+    <h1>FoxPath</h1>
+    <p>Apprends à te déplacer dans Bruxelles grâce à notre jeu “FoxPath” ! Choisis ton propre parcours
+        lors de notre jeu scénarisé et prends les bons réflexes pour gagner la partie ;) 
+    </p>
+    <button type="button">GO</button>
+</hero>
+
+<div class="about" id="about">
+    <h2>
+        Foxpath, c’est quoi?
+    </h2>
+    <p>
+            Trams, métros, bus, vélos, taxis verts… Bruxelles offre de nombreux moyens de se déplacer. Et il est facile de s’y perdre 
+            lorsque l’on découvre à peine la ville. C’est pourquoi nous avons imaginé un site web proposant un jeu interactif pour 
+            apprendre à se déplacer dans la capitale et faire face aux imprévus des transports. Se déplacer ne devrait pas être synonyme 
+            de tare, cela devrait être un moment agréable, nous ne devrions pas passer notre trajet à nous demander si nous arriverons à 
+            l’heure à notre rendez-vous ou si encore nous sommes bien du bon côté de l’arrêt de bus. Notre site est là pour changer la 
+            donne !
+    </p>
+
+    <h2>
+        Pourquoi un renard ?
+    </h2>
+    <p>
+            Les renards ont une présence forte au sein de Bruxelles et dans ses périphéries. Tu as peut-être déjà entendu parler d’un 
+            renard vu dans le métro, ou encore de renards traversant sur les passages pour piéton… C’est pour faire honneur à cet animal 
+            emblématique de la ville de Bruxelles que notre site te propose d’en incarner un tout au long du jeu !
+    </p>
+</div>
+
+<div class="transports" id="transports">
+
+    <h2>
+        Les transports
+    </h2>
+    <p>
+        À Bruxelles, on ne sait parfois plus trop quel transport prendre…
+        Au point où on se retrouve à prendre le tram pendant une heure alors
+        qu’on aurait pu prendre le métro et y être en trois minutes ! Ne commets
+        plus ces erreurs grâce à notre répertoire de transport : on y reprend toutes
+        les informations de chaque transport disponible ainsi que quelques liens
+        qui pourraient t’être utiles… N’oublie pas que les transports en commun
+        sont une option très avantageuse, autant sur le point écologique qu’économique.
+    </p>
+    <div class="icones">
+
+<!-- code en JS pour avoir l'option de montrer/cacher le texte // il faut peut-être créer un fichier js externe
+pour que le code soit plus propre ? -->
+
+<script>
+    function tram(){
+        var x = document.getElementById("tramtext");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }  
+        }
+</script>
+
+<script>
+        function metro(){
+            var x = document.getElementById("metrotext");
+if (x.style.display === "none") {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+        }  
+    }
+    </script>
+
+<script>
+        function taxis(){
+            var x = document.getElementById("taxistext");
+if (x.style.display === "none") {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+        }  
+    }
+    </script>
+
+<script>
+        function bus(){
+            var x = document.getElementById("bustext");
+if (x.style.display === "none") {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+        }  
+    }
+    </script>
+
+<script>
+        function velo(){
+            var x = document.getElementById("velotext");
+if (x.style.display === "none") {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+        }  
+    }
+    </script>
+
+<script>
+        function trotti(){
+            var x = document.getElementById("trottitext");
+if (x.style.display === "none") {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+        }  
+    }
+    </script>
+
+
+        <ul>
+            <li>
+                <img src="" alt="tram" class="js-transport">
+                <p class="js-transport-desc d-none">
+                        Il existe actuellement 18 lignes de tram qui roulent à travers Bruxelles. Les trams étant toujours prioritaires, 
+                        il y a un gain de temps certain à les utiliser. Ils ne sont par contre pas toujours à l’abri d’une circulation 
+                        bouchonnée. Dans tous les cas, le tramway présente un certain confort, en particulier pour les PMR. Le tram 
+                        faisant parti des transports proposés par la STIB, nous t’invitons à te rendre sur leur site web pour prendre 
+                        connaissance des horaires, des tarifs et du plan des lignes : <a href="www.stib-mivb.be">www.stib-mivb.be</a>
+                </p>
+            </li>
+                <div id="metrotext">
+                        Le métro possède quatre lignes qui te permettent de te déplacer dans une grosse partie de Bruxelles. L’avantage 
+                        principal du métro est bien sûr sa rapidité : éviter le traffic, c’est éviter les bouchons ! Le temps d’attente 
+                        est considérablement réduit. Le métro faisant parti des transports proposés par la STIB, nous t’invitons à te 
+                        rendre sur leur site web pour prendre connaissance des horaires, des tarifs et du plan des lignes : 
+                        <a href="www.stib-mivb.be">www.stib-mivb.be</a>
+                    </div>
+                <button onclick="taxis()">Taxi</button>
+                <div id="taxistext">
+                    Les taxis verts circulent dans toute la région de Bruxelles-Capitale, et bien que cette option paraissent un peu cher 
+                    quand on est étudiant, le prix peut être bien plus abordable quand il est partagé entre trois ou quatre personnes ! 
+                    De plus, le taxi t’offre une sécurité et un confort sans égal. Renseigne-toi sur les tarifs sur le site 
+                    <a href="www.taxisverts.be">www.taxisverts.be</a>. Les taxis verts t’offrent également un service de nuit appelé Collecto : pour 5€, de 23h à 6h, 
+                    tous les jours, un taxi vient te chercher à un point de collecte et te dépose directement chez toi ! Une bonne 
+                    solution pour pouvoir profiter de la soirée un peu plus longtemps.
+                </div>
+                <button onclick="bus()">Bus</button>
+                <div id="bustext">
+                        Le système de bus te propose plus de soixante lignes, aller et retour, t’offrant ainsi la possibilité de te 
+                        déplacer dans d’innombrables lieux de Bruxelles en choisissant avec précision l’arrêt qui te convient ! Attention 
+                        cependant aux retards qui peuvent être occasionnés par les embouteillages. Les bus sont gérés par la STIB et par
+                         De Lijn, nous t’invitons à te rendre sur leurs sites web pour prendre connaissance des horaires, des tarifs et 
+                         du plan des lignes : <a href="www.stib-mivb.be">www.stib-mivb.be</a> et <a href="www.delijn.be">www.delijn.be</a>. 
+                         La STIB te propose également un service de nuit en weekend pour les bus, appelé Noctis ! Tu peux les repérer 
+                         grâce au “N” qui précède leur numérotation. Départ toutes les 30 minutes, de minuit à 3h du matin les nuits du 
+                         vendredi au samedi et du samedi au dimanche.
+                        </div>
+                <button onclick="velo()">Vélo</button>
+                <div id="velotext">
+                        Le vélo est probablement la première option qui vient à l’esprit quand on parle de déplacement vert. Bruxelles te 
+                        propose un système de location de vélo appelé Villo!, disponible tous les jours 24h/24, à un tarif très abordable ! 
+                        Nous te conseillons fortement cette option pour également améliorer ton bien-être grâce à l’effort physique et ta 
+                        liberté de mouvements.  N’hésite plus la prochaine fois que tu passes devant une station ;) Et si tu souhaites plus 
+                        d’informations, rends-toi sur le site <a href="www.villo.be">www.villo.be</a>
+                    </div>
+                <button onclick="trotti()">Trottinette</button>
+                <div id="trottitext">
+                        Les trottinettes débarquent à Bruxelles ! Rapide et accessible, la trottinette électrique t’emmène où tu veux en 
+                        un clin d’oeil. Pense à prendre un casque avant de partir ! Et calcule surtout bien le coût : les transports en 
+                        communs seront parfois plus rentables que la trottinette malheureusement. Renseigne-toi sur soit le site 
+                        <a href="www.troty.be">www.troty.be</a>, soit sur le site <a href="www.bird.co">www.bird.co</a>.
+                </div>
+        </ul>
+    </div>
+</div>
+
+<div class="team" id="team">
+        <h2>
+            Notre équipe
+        </h2>
+        <p>
+                Notre startup se situe au coeur de Bruxelles dans les bureaux de WebVistaSouth.
+                Créée en 2016, elle est née d’une volonté de réaliser des projets
+                innovateurs au cours desquels nous laissons libre cours à notre créativité.
+                Nous travaillons en collaboration avec une équipe de développeurs web
+                basée à Paris qui ont un regard professionnel et minutieux sur toutes nos
+                créations.
+        </p>
+        <p>
+                Le projet FoxPath a été développé par nos deux fondatrices : Céline Mourrier
+                et Lena Ramis.
+                Céline Mourrier est designer UI et s’est occupée de toutes les réalisations graphiques du site. 
+                Lena Ramis est développeur web et s’est chargée de la scénarisation du jeu.
+        </p>
+        <img src="images/celine.jpg" alt="Céline Mourrier, designer UI">
+        <img src="images/lena.jpg" alt="Lena Ramis, scénariste et dev web">
+</div>
+
+<footer>
+
+    <h3>
+        Nous contacter
+    </h3>
+
+        <li><a href="http://facebook.com/foxpath">Facebook</a></li>
+        <li><a href="http://twitter.com/foxpath">Twitter</a></li>
+        <li><a href="http://instagram.com/foxpath">Instagram</a></li>
+
+        <h4>Une question ? Un mail !</h4>
+        <a href="mailto:foxpath@info.be">foxpath@info.be</a>
+
+    <p>
+        <li><a href="http://foxpath.be/user_conditions/">Conditions d'utilisation</a></li>
+        <li><a href="http://foxpath.be/privacy_policy/">Politique de confidentialité</a></li>
+    </p>
+</footer>
+
+</body>
+</html>

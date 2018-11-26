@@ -1,0 +1,9 @@
+header > li {
+    background-color: blue;
+    display: inline;
+    position: sticky;
+}
+
+.d-none {
+    display:none;
+}
